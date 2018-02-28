@@ -24,11 +24,12 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "o+)!nf!)8y%9_del#wrrre(gg#s9(c4$-70-ll#w2$2o6cqe_y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    'events.apps.EventsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
@@ -21,6 +21,6 @@ from timeout_backend import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('events/', views.event, name='event'),
+    path('events/',include('events.urls')),
     path('admin/', admin.site.urls),
 ]
