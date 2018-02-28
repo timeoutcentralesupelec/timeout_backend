@@ -21,6 +21,6 @@ from timeout_backend import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('/events', views.event, name='event'),
+    path('events/', views.event, name='event'),
     path('admin/', admin.site.urls),
 ]
