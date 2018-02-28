@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def event(request):
+def index(request):
     return HttpResponse("Page des events")
