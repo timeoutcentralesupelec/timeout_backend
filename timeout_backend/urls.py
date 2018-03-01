@@ -13,14 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import include
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 
 from timeout_backend import views
+import config.router
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('events/',include('events.urls')),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += config.router.router.urls
