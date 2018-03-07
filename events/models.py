@@ -25,7 +25,7 @@ class Event(models.Model):
     description = models.CharField(
         max_length=2000,
         verbose_name="Description de l'événement",
-        blank=True
+        blank=True,
     )
     image = models.CharField(
         max_length=1000,
