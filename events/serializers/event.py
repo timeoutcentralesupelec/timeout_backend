@@ -1,5 +1,7 @@
-from .models import Event
 from rest_framework import serializers
+
+from events.models import Event
+
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.IntegerField(source='pk')
