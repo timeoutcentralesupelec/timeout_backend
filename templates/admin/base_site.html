@@ -8,8 +8,12 @@
 
 {% block extrastyle %}
 <style>
-    #header, .module h2, .module caption, .inline-group h2, .button { background: #ad1a32 }
+    #header { background: #ad1a32; color: #fff }
+    .module h2, .module caption, .inline-group h2, .button { background: #ad1a32 }
     #branding, #branding h1, #branding h1 a:link, #branding h1 a:visited { color: #fff }
+    div.breadcrumbs { background: #fff; color: #000 }
+    div.breadcrumbs a { color: #999 }
+    div.breadcrumbs a:focus, div.breadcrumbs a:hover { color: rgba(173, 26, 50, 0.5) }
 </style>
 {% endblock %}
 
