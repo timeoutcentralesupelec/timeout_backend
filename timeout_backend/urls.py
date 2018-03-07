@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path
 
 from timeout_backend import views
-import config.router
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -26,4 +25,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-urlpatterns += config.router.router.urls
