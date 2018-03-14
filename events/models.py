@@ -22,7 +22,7 @@ class Event(models.Model):
         null=False,
         blank=False,
     )
-    description = RichTextField(
+    description = models.CharField(
         max_length=2000,
         verbose_name="Description de l'événement",
         blank=True,
