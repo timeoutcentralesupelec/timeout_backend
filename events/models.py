@@ -1,16 +1,27 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+
 # Create your models here.
+
+class Asso(models.Model):
+    name = models.CharField(
+        max_length=30,
+        verbose_name="Nom de l'asso",
+        blank=False
+    )
+
+    def __str__(self):
+        return self.name
+
 class Event(models.Model):
     name = models.CharField(
         max_length=30,
         verbose_name="Nom de l'événement",
         blank=False
     )
-    asso = models.CharField(
-        max_length=30,
-        verbose_name="Asso organisatrice",
-        blank=False
+    asso = models.ForeignKey(
+        Asso,
+        on_delete=models.CASCADE
     )
     date = models.DateTimeField(
         verbose_name="Date de l'évènement",
