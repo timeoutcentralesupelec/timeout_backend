@@ -5,7 +5,7 @@ from events.models import Event
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.IntegerField(source='pk')
-    # asso = serializers.StringRelatedField(many = False, source = 'asso.pk') Needed if asso is foreign key in the Event model
+    asso = serializers.StringRelatedField(many = False, source = 'asso.pk')
 
     class Meta:
         model = Event
