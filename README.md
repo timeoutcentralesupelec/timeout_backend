@@ -1,49 +1,34 @@
-# Heroku Django Starter Template
+# Projet TimeoutCentrale BAM
 
-An utterly fantastic project starter template for Django 2.0.
+Le projet TimeOut CentraleSupélec est un projet d'option ISIA de 3ème année de l'année scolaire 2017-2018 en partenariat avec l'entreprise BAM.
 
-## Features
+Le projet a pour but de créer une application mobile récapitulant les évènements qui ont lieu sur le campus de l'école.
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
+# Contributeurs
 
-## How to Use
+* Claire Clémot
+* Maxime Allain
+* Chloé Gobé
+* BAM
 
-To use this project, follow these steps:
+# Structure du projet
 
-1. Create your working environment.
-2. Install Django (`$ pipenv install django`)
-3. Create a new project using this template
+Le projet est divisé en deux repositories, le back office admin en django est disponible sous le repository timeout_back et timeout-centrale est le repository de l'application mobile
 
-## Creating Your Project
+# Rôles sur la plateforme
 
-Using this template to create a new Django app is easy::
+* Administrateur :
+  * ajouter des événements pour le campus
+  * modérer les événements rajoutés par d'autres associations
+  * ajouter des associations
+* Associations :
+  * ajouter des événements associés à son association, qui sera modéré.
 
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
+# Requirements
 
-(If this doesn't work on windows, replace `django-admin.py` with `django-admin`)
+* Installe Django `pip install django`
 
-You can replace ``helloworld`` with your desired project name.
+# Déploiement sur Heroku
 
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
     $ git push heroku master
-
     $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-
-## License: MIT
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
