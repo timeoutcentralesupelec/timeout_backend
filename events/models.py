@@ -45,7 +45,7 @@ class Event(models.Model):
     price = models.CharField(
         max_length=10,
         verbose_name="Prix de l'évènement",
-        blank=False
+        blank=True
     )
 
     def __str__(self):
