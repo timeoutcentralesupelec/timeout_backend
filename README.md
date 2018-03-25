@@ -31,4 +31,5 @@ Le projet est divisé en deux repositories, le back office admin en django est d
 # Déploiement sur Heroku
 
     $ git push heroku master
+    $ heroku run python manage.py makemigrations
     $ heroku run python manage.py migrate
