@@ -22,14 +22,19 @@ Le projet est divisé en deux repositories, le back office admin en django est d
   * modérer les événements rajoutés par d'autres associations
   * ajouter des associations
 * Associations :
-  * ajouter des événements associés à son association, qui sera modéré.
+  * ajouter des événements associés à son association, qui seront modérés
 
 # Requirements
 
 * Installe Django `pip install django`
 
+# Django
+
+À la racine du dossier, lancer les commandes suivantes après avoir modifié un modèle :
+
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+    
 # Déploiement sur Heroku
 
     $ git push heroku master
-    $ heroku run python manage.py makemigrations
-    $ heroku run python manage.py migrate
