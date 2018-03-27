@@ -27,12 +27,12 @@ class Event(models.Model):
         verbose_name="Description de l'événement",
         blank=True,
     )
-    image = models.CharField(
+    image = models.URLField(
         max_length=1000,
         verbose_name="URL de la photo associée",
         blank=False
     )
-    link = models.CharField(
+    link = models.URLField(
         max_length=1000,
         verbose_name="Lien associé à l'évènement",
         blank=True
