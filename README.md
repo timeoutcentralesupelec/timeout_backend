@@ -30,7 +30,16 @@ Le projet est divisé en deux repositories, le back office admin en django est d
 
 # Django
 
-À la racine du dossier, lancer les commandes suivantes après avoir modifié un modèle :
+Le code de notre application backend se trouve dans le dossier `timeout_backend`. C'est ici qu'on y trouve les paramètres (`settings.py`), les pages de l'interface web (`urls.py`) et la vue principale (`views.py`).
+
+Cette application appelle le module `events` qui inclut :
+* le modèle Event (`models.py`)
+* l'ajout de ce modèle à l'interface admin (`admin.py`)
+* un serializer pour transformer le modèle en json (`serializers\event.py`)
+* une vue de ce json (`views\event_list.py`)
+* les urls associées au modèle ainsi qu'à cette vue (`urls.py`)
+
+Après avoir modifié un modèle, ne pas oublier de lancer les commandes suivantes à la racine du dossier :
 
     $ python manage.py makemigrations
     $ python manage.py migrate
