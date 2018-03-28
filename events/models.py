@@ -1,5 +1,5 @@
 from django.db import models
-#from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Event(models.Model):
     name = models.CharField(
@@ -22,7 +22,7 @@ class Event(models.Model):
         null=False,
         blank=False,
     )
-    description = models.CharField(
+    description = RichTextField(
         max_length=5000,
         verbose_name="Description de l'événement",
         blank=True,
