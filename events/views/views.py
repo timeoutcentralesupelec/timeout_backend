@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import serializers
 
-from events.models import Event
+from events.models.Event import Event
 
 
 def index(request):
