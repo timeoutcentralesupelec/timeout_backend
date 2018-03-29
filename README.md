@@ -48,6 +48,13 @@ Après avoir modifié un modèle, ne pas oublier de lancer les commandes suivant
     
 # Déploiement sur Heroku
 
+Heroku nous permet d'héberger le projet en ligne.
+La procédure à suivre :
+- Modification du projet en local
+- Push et Merge sur GitHub
+- Pull en local
+- Push sur Heroku
+
 ## Migration
 
     $ heroku run python manage.py makemigrations
