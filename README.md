@@ -26,7 +26,8 @@ Le projet est divisé en deux repositories, le back office admin en django est d
 
 # Requirements
 
-* Installe Django `pip install django`
+* Installer Django `pip install django`
+* Installer Ckeditor `pip install django-ckeditor`
 
 # Django
 
@@ -44,6 +45,14 @@ Après avoir modifié un modèle, ne pas oublier de lancer les commandes suivant
     $ python manage.py makemigrations
     $ python manage.py migrate
     
+    
 # Déploiement sur Heroku
 
+## Migration
+
+    $ heroku run python manage.py makemigrations
+    $ heroku run python manage.py migrate
+    
+## Déploiement
+    
     $ git push heroku master
