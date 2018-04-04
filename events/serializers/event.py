@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from events.models import Event
+from events.models.Event import Event
 
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.IntegerField(source='pk')
-    # asso = serializers.StringRelatedField(many = False, source = 'asso.pk') Needed if asso is foreign key in the Event model
+    asso = serializers.StringRelatedField(many = False, source = 'asso.name') #Needed if asso is foreign key in the Event model
 
     class Meta:
         model = Event
